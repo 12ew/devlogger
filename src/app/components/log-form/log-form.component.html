@@ -9,18 +9,19 @@
         placeholder="Add a log..."
       />
     </div>
+
     <input
       type="submit"
       value="Add log"
       class="btn btn-light"
       [disabled]="!this.text"
     />
-    <button
+    <input
       (click)="clearState()"
+      type="button"
+      value="Clear"
       class="btn btn-warning ml-3"
       [hidden]="!this.text"
-    >
-      Clear
-    </button>
+    />
   </form>
 </div>
