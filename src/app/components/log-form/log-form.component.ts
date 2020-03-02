@@ -50,6 +50,9 @@ export class LogFormComponent implements OnInit {
       // Update log
       this.logService.updateLog(updLog);
     }
+
+    // Clear the state
+    this.clearState();
   }
 
   generateId() {
@@ -58,5 +61,13 @@ export class LogFormComponent implements OnInit {
         v = c == "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
     });
+  }
+
+  clearState() {
+    this.isNew = true;
+    this.id = "";
+    this.text = "";
+    this.date = "";
+    this.logService.clearState();
   }
 }

@@ -15,6 +15,12 @@
       class="btn btn-light"
       [disabled]="!this.text"
     />
-    <button class="btn btn-warning" [hidden]="!this.text">Clear</button>
+    <button
+      (click)="clearState()"
+      class="btn btn-warning ml-3"
+      [hidden]="!this.text"
+    >
+      Clear
+    </button>
   </form>
 </div>
